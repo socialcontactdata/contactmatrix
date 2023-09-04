@@ -34,7 +34,8 @@ new_contactmatrix <- function(
     from,
     to,
     value,
-    fill = 0
+    fill = 0,
+    symmetric = NA
   ) {
 
   # from checks
@@ -86,6 +87,7 @@ new_contactmatrix <- function(
   x[as.matrix(list2DF(c(from, to)))] <- value
 
   class(x) <- c("contact_matrix", "array")
+  attr(x, "symmetric") <- symmetric
 
   return(x)
 
