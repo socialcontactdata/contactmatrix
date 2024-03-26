@@ -91,7 +91,7 @@ new_contactmatrix <- function(
 
   x[as.matrix(list2DF(c(from, to)))] <- value
 
-  class(x) <- c("contact_matrix", "array")
+  class(x) <- c("contact_matrix", class(x))
   attr(x, "symmetric") <- symmetric
 
   return(x)
