@@ -1,10 +1,14 @@
 #' Constructor for a `contactmatrix` object
 #'
-#' @param from
+#' @param from Character vector, or list of character vectors in the case of
+#'    multiple groupings, indicating the characteristics of each
 #' @param to
 #' @param value
 #' @param fill Numeric value to use for contacts non-defined in the `from`,
 #'   `to`, `value` argument triplet. Defaults to `0`; i.e., no contact.
+#'
+#' @details
+#' - `from`, `to` and `value` must have the same length, as
 #'
 #' @export
 #'
@@ -12,8 +16,8 @@
 #' library(tibble)
 #'
 #' new_contactmatrix(
-#'   from = c("00-05","05-10", "05-10"),
-#'   to = c("00-05", "10-15", "15-20"),
+#'   from = c("00_05","05_10", "05_10"),
+#'   to = c("00_05", "10_15", "15_20"),
 #'   value = c(0.32, 0.46, 0.72)
 #' )
 #'
@@ -92,3 +96,38 @@ new_contactmatrix <- function(
   return(x)
 
 }
+
+validate_contactmatrix <- function(x, error = TRUE) {
+
+  is.logical(attr(x, "symmetric"))
+
+}
+
+as_contactmatrix <- function(x, ...) {
+
+  UseMethod()
+
+}
+
+#' Test whether a object is a valid `contactmatrix` object
+#'
+#' This function tests if the object `x` inherits from the `contactmatrix`
+#'   object.
+#'
+#' @param x object to test
+#'
+#' @returns A logical (`TRUE` or `FALSE`) indicating whether this object is a
+#'   contactmatrix object.
+#'
+#' @note
+#' This doesn't say anything about whether `x` is a valid `contactmatrix` object
+#' as defined in this package. You can use [validate_contactmatrix()] for this.
+#'
+#' @seealso [validate_contactmatrix()]
+#'
+is_contactmatrix <- function(x) {
+
+  inherits(x, "contactmatrix")
+
+}
+
