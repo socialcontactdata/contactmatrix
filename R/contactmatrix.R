@@ -109,6 +109,15 @@ as_contactmatrix <- function(x, ...) {
 
 }
 
+as_contactmatrix.default <- function(x, ...) {
+
+  stop(
+    "`as_contactmatrix()` method not defined for this class of object",
+    call. = FALSE
+  )
+
+}
+
 #' Test whether a object is a valid `contactmatrix` object
 #'
 #' This function tests if the object `x` inherits from the `contactmatrix`
