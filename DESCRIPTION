@@ -1,6 +1,5 @@
 Package: contactmatrix
-Title: Provides a Standard Class and Methods to Work with Empirical and
-    Synthetic Social Contact Data
+Title: Standard Class and Methods for Empirical and Synthetic Social Contact Data
 Version: 0.0.1
 Authors@R: c(
     person(given = "Hugo", family = "Gruson", 
