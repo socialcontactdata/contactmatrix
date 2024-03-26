@@ -1,32 +1,66 @@
 new_contactmatrix_list <- function(...) {
 
-  devnull <- lapply(..., function(x) {
-    stopifnot(
-      "All elements of a `contactmatrix_list` must be of class `contactmatrix`" = !is_contactmatrix(x)
-    )
-  })
-
   res <- list(...)
 
   class(res) <- "contactmatrix_list"
+
+  assert_contactmatrix_list(res)
 
   return(res)
 
 }
 
-validate_contactmatrix_list <- function(x, error = TRUE) {
+#' Assert whether a object is a **valid** `contactmatrix_list` object
+#'
+#' This function asserts that the object `x` is a valid `contactmatrix_list`
+#'   object.
+#'
+#' @param x object to test
+#'
+#' @returns An error if `x` is not a valid `contactmatrix_list` object and `x`
+#' invisibly otherwise.
+#'
+#' @export
+#'
+#' @seealso [test_contactmatrix_list()]
+assert_contactmatrix_list <- function(x) {
 
-  devnull <- lapply(x, function(x) {
-    stopifnot(
-      "All elements of a `contactmatrix_list` must be of class `contactmatrix`" = !is_contactmatrix(x)
+  if (!test_contactmatrix_list(x)) {
+    stop(
+      "All elements of a contactmatrix_list must be contact_matrix ",
+      "with the same groupings, divided in the same groups",
+      call. = FALSE
     )
-  })
+  }
 
-  invisible(x)
+  return(invisible(x))
 
 }
 
-#' Test whether a object is a valid `contactmatrix_list` object
+#' Test whether a object is a **valid** `contactmatrix_list` object
+#'
+#' This function tests if the object `x` is a valid `contactmatrix_list`
+#'   object.
+#'
+#' @param x object to test
+#'
+#' @returns A logical (`TRUE` or `FALSE`) indicating whether this object is a
+#' valid `contactmatrix_list` object.
+#'
+#' @export
+#'
+#' @seealso [test_contactmatrix_list()]
+test_contactmatrix_list <- function(x) {
+
+  all_cm <- vapply(x, is_contactmatrix, logical(1))
+  groupings <- lapply(x, dimnames)
+  is_cml <- is_contactmatrix_list(x)
+
+  return(is_cml && all_cm && length(unique(groupings)) == 1)
+
+}
+
+#' Test whether a object is a `contactmatrix_list` object
 #'
 #' This function tests if the object `x` inherits from the `contactmatrix_list`
 #'   object.
@@ -39,9 +73,11 @@ validate_contactmatrix_list <- function(x, error = TRUE) {
 #' @note
 #' This doesn't say anything about whether `x` is a valid `contactmatrix_list`
 #' object as defined in this package. You can use
-#' [validate_contactmatrix_list()] for this.
+#' [assert_contactmatrix_list()] for this.
 #'
-#' @seealso [validate_contactmatrix_list()]
+#' @export
+#'
+#' @seealso [assert_contactmatrix_list()], [test_contactmatrix_list()]
 #'
 is_contactmatrix_list <- function(x) {
 
