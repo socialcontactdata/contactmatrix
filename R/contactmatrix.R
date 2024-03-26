@@ -13,26 +13,27 @@
 #' @export
 #'
 #' @examples
-#' library(tibble)
+#' # Usual case; single grouping by age
+#' new_contactmatrix(
+#'   from  = c("00_05", "05_10", "05_10"),
+#'   to    = c("00_05", "10_15", "15_20"),
+#'   value = c(0.32   , 0.46   , 0.72   )
+#' )
+#'
+#' # Multiple groupings; gender & case
+#' dat <- data.frame(
+#'   age    = c("young", "young", "old"),
+#'   gender = c("male", "female", "female"),
+#'   age    = c("old", "old", "young"),
+#'   gender = c("female", "female", "female"),
+#'   value  = c(1, 2, 2)
+#' )
 #'
 #' new_contactmatrix(
-#'   from = c("00_05","05_10", "05_10"),
-#'   to = c("00_05", "10_15", "15_20"),
-#'   value = c(0.32, 0.46, 0.72)
+#'   from  = dat[, c(1, 2)],
+#'   to    = dat[, c(3, 4)],
+#'   value = dat[, "value"]
 #' )
-#'
-#' dat <- tribble(
-#'   ~age,  ~gender,    ~age,  ~gender, ~value,
-#'   "young",   "male",   "old", "female",     1L,
-#'   "young", "female",   "old", "female",     2L,
-#'   "old", "female", "young", "female",     2L
-#' )
-#'
-#' from <- .subset(dat, 1:2)
-#' to <- .subset(dat, 3:4)
-#' value <- .subset2(dat, 5L)
-#'
-#' new_contactmatrix(from, to, value)
 #'
 new_contactmatrix <- function(
     from,
