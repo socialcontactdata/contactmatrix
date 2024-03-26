@@ -1,14 +1,27 @@
 #' Constructor for a `contactmatrix` object
 #'
-#' @param from Character vector, or list of character vectors in the case of
-#'    multiple groupings, indicating the characteristics of each
-#' @param to
-#' @param value
+#' @param from Character vector, or list of named character vectors in the case
+#'    of multiple groupings, indicating the characteristics of the group
+#'    contacting.
+#' @param to Character vector, or list of named character vectors in the case
+#'    of multiple groupings, indicating the characteristics of the group
+#'    contacted.
+#' @param value Value of the contact between individual in groups `from` and
+#'    group `to`
 #' @param fill Numeric value to use for contacts non-defined in the `from`,
 #'   `to`, `value` argument triplet. Defaults to `0`; i.e., no contact.
+#' @param symmetrix Logical value (default to `NA`) indicating whether the
+#'   resulting [contact_matrix] is symmetric, i.e.,  $c_{ij}N_i == c_{ji}N_j$
+#'   where $i$ is a group from `from`, $j$ a group from `to`, $c$ their
+#'   corresponding contact `value` and $N$ the group size.
 #'
 #' @details
-#' - `from`, `to` and `value` must have the same length, as
+#' - `from`, `to` and `value` must have the same length
+#'
+#' @returns
+#' An array (a matrix if only 1 grouping = 2 dimensions) of subclass
+#' [contact_matrix].
+#' The array has $2n$ dimensions where $n$ is the number of groupings.
 #'
 #' @export
 #'
@@ -104,12 +117,20 @@ validate_contactmatrix <- function(x, error = TRUE) {
 
 }
 
+#' Convert an object to a `contact_matrix` object.
+#'
+#' @param x Object to convert
+#' @param ... Arguments passed to methods
+
+#' @export
 as_contactmatrix <- function(x, ...) {
 
   UseMethod()
 
 }
 
+#' @rdname as_contactmatrix
+#' @export
 as_contactmatrix.default <- function(x, ...) {
 
   stop(
@@ -135,6 +156,7 @@ as_contactmatrix.default <- function(x, ...) {
 #'
 #' @seealso [validate_contactmatrix()]
 #'
+#' @export
 is_contactmatrix <- function(x) {
 
   inherits(x, "contactmatrix")
