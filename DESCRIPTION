@@ -6,10 +6,10 @@ Authors@R: c(
     person(given = "Hugo", family = "Gruson", 
            email = "hugo.gruson+R@normalesup.org", 
            role = c("aut", "cre"),
-           comment = c(ORCID = "https://orcid.org/0000-0002-4094-1476")),
+           comment = c(ORCID = "0000-0002-4094-1476")),
     person(given = "Tim", family = "Taylor",
            role = c("aut"), 
-           comment = c(ORCID = "https://orcid.org/0000-0002-8587-7113"))
+           comment = c(ORCID = "0000-0002-8587-7113"))
   )
 Description: Your package description. It must end with a period (".") and
     include relevant bibliographical references if applicable, using the 
