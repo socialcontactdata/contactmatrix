@@ -12,18 +12,16 @@ test_that("new_contactmatrix() generates correct class and format", {
   expect_identical(unname(dim(cm2d)), c(4L, 4L))
 
   # Multiple groupings; gender & case
-  dat <- data.frame(
-    age    = c("young", "young", "old"),
-    gender = c("male", "female", "female"),
-    age    = c("old", "old", "young"),
-    gender = c("female", "female", "female"),
-    value  = c(1, 2, 2)
-  )
-
   cm3d <- new_contactmatrix(
-    from  = dat[, c(1, 2)],
-    to    = dat[, c(3, 4)],
-    value = dat[, "value"]
+    from  = list(
+      age = c("young", "young", "old"),
+      gender = c("male", "female", "female")
+    ),
+    to    = list(
+      age    = c("old", "old", "young"),
+      gender = c("female", "female", "female")
+    ),
+    value = c(1, 2, 2)
   )
 
   expect_s3_class(cm3d, "contactmatrix")

@@ -36,18 +36,16 @@
 #' )
 #'
 #' # Multiple groupings; gender & case
-#' dat <- data.frame(
-#'   age    = c("young", "young", "old"),
-#'   gender = c("male", "female", "female"),
-#'   age    = c("old", "old", "young"),
-#'   gender = c("female", "female", "female"),
-#'   value  = c(1, 2, 2)
-#' )
-#'
-#' new_contactmatrix(
-#'   from  = dat[, c(1, 2)],
-#'   to    = dat[, c(3, 4)],
-#'   value = dat[, "value"]
+#' cm3d <- new_contactmatrix(
+#'   from  = list(
+#'     age = c("young", "young", "old"),
+#'     gender = c("male", "female", "female")
+#'   ),
+#'   to    = list(
+#'     age    = c("old", "old", "young"),
+#'     gender = c("female", "female", "female")
+#'   ),
+#'   value = c(1, 2, 2)
 #' )
 #'
 new_contactmatrix <- function(
