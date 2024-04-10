@@ -4,6 +4,9 @@
     <loc>/404.html</loc>
   </url>
   <url>
+    <loc>/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
     <loc>/LICENSE-text.html</loc>
   </url>
   <url>
@@ -16,6 +19,33 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/aggregate.contactmatrix_list.html</loc>
+  </url>
+  <url>
+    <loc>/reference/as_contactmatrix.html</loc>
+  </url>
+  <url>
+    <loc>/reference/assert_contactmatrix.html</loc>
+  </url>
+  <url>
+    <loc>/reference/assert_contactmatrix_list.html</loc>
+  </url>
+  <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/is_contactmatrix.html</loc>
+  </url>
+  <url>
+    <loc>/reference/is_contactmatrix_list.html</loc>
+  </url>
+  <url>
+    <loc>/reference/new_contactmatrix.html</loc>
+  </url>
+  <url>
+    <loc>/reference/test_contactmatrix.html</loc>
+  </url>
+  <url>
+    <loc>/reference/test_contactmatrix_list.html</loc>
   </url>
 </urlset>
