@@ -3,7 +3,7 @@
 \name{as_contactmatrix}
 \alias{as_contactmatrix}
 \alias{as_contactmatrix.default}
-\title{Convert an object to a \code{contact_matrix} object.}
+\title{Convert an object to a \code{contactmatrix} object.}
 \usage{
 as_contactmatrix(x, ...)
 
@@ -15,5 +15,5 @@ as_contactmatrix(x, ...)
 \item{...}{Arguments passed to methods}
 }
 \description{
-Convert an object to a \code{contact_matrix} object.
+Convert an object to a \code{contactmatrix} object.
 }

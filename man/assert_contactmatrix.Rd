@@ -21,7 +21,7 @@ object.
 Checks:
 \itemize{
 \item \code{x} inherits from the \code{array} class
-\item \code{x} inherits from the \code{contact_matrix} class
+\item \code{x} inherits from the \code{contactmatrix} class
 \item \code{x} is an hypercube, i.e., number of rows and number of columns are equal
 \item \code{x} has a \code{symmetric} attribute of class \code{logical}
 }

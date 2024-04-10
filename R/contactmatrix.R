@@ -104,7 +104,7 @@ new_contactmatrix <- function(
 
   x[as.matrix(list2DF(c(from, to)))] <- value
 
-  class(x) <- c("contact_matrix", class(x))
+  class(x) <- c("contactmatrix", class(x))
   attr(x, "symmetric") <- symmetric
 
   return(x)
@@ -123,7 +123,7 @@ new_contactmatrix <- function(
 #'
 #' @note Checks:
 #' - `x` inherits from the `array` class
-#' - `x` inherits from the `contact_matrix` class
+#' - `x` inherits from the `contactmatrix` class
 #' - `x` is an hypercube, i.e., number of rows and number of columns are equal
 #' - `x` has a `symmetric` attribute of class `logical`
 #'
@@ -134,7 +134,7 @@ assert_contactmatrix <- function(x) {
 
   if (!test_contactmatrix(x)) {
     stop(
-      "Object is not a valid `contact_matrix` object.",
+      "Object is not a valid `contactmatrix` object.",
       call. = FALSE
     )
   }
@@ -169,7 +169,7 @@ test_contactmatrix <- function(x) {
 
 }
 
-#' Convert an object to a `contact_matrix` object.
+#' Convert an object to a `contactmatrix` object.
 #'
 #' @param x Object to convert
 #' @param ... Arguments passed to methods
