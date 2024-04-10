@@ -7,8 +7,18 @@ Authors@R: c(
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4094-1476")),
     person(given = "Tim", family = "Taylor",
-           role = c("aut"), 
-           comment = c(ORCID = "0000-0002-8587-7113"))
+           role = "aut", 
+           comment = c(ORCID = "0000-0002-8587-7113")),
+    person(given = "Sebastian", family = "Funk",
+           role = "ctb"),
+    person(given = "Lander", family = "Willem", 
+           role = "ctb"),
+    person(given = "Niel", family = "Hens", 
+           role = "ctb"),
+    person(given = "Pietro", family = "Coletti", 
+           role = "ctb"),
+    person(given = "Nicholas", family = "Tierney",
+           role = "ctb")
   )
 Description: Your package description. It must end with a period (".") and
     include relevant bibliographical references if applicable, using the 
