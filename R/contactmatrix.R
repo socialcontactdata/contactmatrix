@@ -80,7 +80,7 @@ new_contactmatrix <- function(
     stop("all variables in `to` must have the same length as those in `from`.")
 
   # value checking
-  if(!is.numeric(value))
+  if (!is.numeric(value))
     stop("`value` must be <numeric>.")
   if (length(value) != nrows_from)
     stop("`value` must be the same length as the variables in `from`.")
@@ -93,7 +93,11 @@ new_contactmatrix <- function(
 
   possible_traits <- setNames(
     c(possible_traits, possible_traits),
-    paste(rep(names(possible_traits), 2), rep(c("from", "to"), each = length_from), sep = "_")
+    paste(
+      rep(names(possible_traits), 2),
+      rep(c("from", "to"), each = length_from),
+      sep = "_"
+    )
   )
 
   x <- array(
@@ -216,4 +220,3 @@ is_contactmatrix <- function(x) {
   inherits(x, "contactmatrix")
 
 }
-

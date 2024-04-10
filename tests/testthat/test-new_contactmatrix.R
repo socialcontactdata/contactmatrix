@@ -2,7 +2,7 @@ test_that("new_contactmatrix() generates correct class and format", {
   cm2d <- new_contactmatrix(
     from  = c("00_05", "05_10", "05_10"),
     to    = c("00_05", "10_15", "15_20"),
-    value = c(0.32   , 0.46   , 0.72   )
+    value = c(0.32, 0.46, 0.72)
   )
 
   expect_s3_class(cm2d, "contactmatrix")
