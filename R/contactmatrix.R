@@ -111,9 +111,61 @@ new_contactmatrix <- function(
 
 }
 
-validate_contactmatrix <- function(x, error = TRUE) {
+#' Assert whether a object is a **valid** `contactmatrix` object
+#'
+#' This function asserts that the object `x` is a valid `contactmatrix`
+#'   object.
+#'
+#' @param x object to test
+#'
+#' @returns An error if `x` is not a valid `contactmatrix` object and `x`
+#' invisibly otherwise.
+#'
+#' @note Checks:
+#' - `x` inherits from the `array` class
+#' - `x` inherits from the `contact_matrix` class
+#' - `x` is an hypercube, i.e., number of rows and number of columns are equal
+#' - `x` has a `symmetric` attribute of class `logical`
+#'
+#' @export
+#'
+#' @seealso [test_contactmatrix_list()]
+assert_contactmatrix <- function(x) {
 
-  is.logical(attr(x, "symmetric"))
+  if (!test_contactmatrix(x)) {
+    stop(
+      "Object is not a valid `contact_matrix` object.",
+      call. = FALSE
+    )
+  }
+
+  return(invisible(x))
+
+}
+
+#' Test whether a object is a **valid** `contactmatrix_list` object
+#'
+#' This function tests if the object `x` is a valid `contactmatrix_list`
+#'   object.
+#'
+#' @param x object to test
+#'
+#' @returns A logical (`TRUE` or `FALSE`) indicating whether this object is a
+#' valid `contactmatrix_list` object.
+#'
+#' @inherit assert_contactmatrix note
+#'
+#' @export
+#'
+#' @seealso [test_contactmatrix_list()]
+test_contactmatrix <- function(x) {
+
+  return(
+    inherits(x, "array") &&
+      is_contactmatrix(x) &&
+      length(unique(dim(x))) == 1L &&
+      is.logical(attr(x, "symmetric"))
+  )
 
 }
 
