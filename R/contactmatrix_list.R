@@ -52,7 +52,7 @@ assert_contactmatrix_list <- function(x) {
 #' @seealso [test_contactmatrix_list()]
 test_contactmatrix_list <- function(x) {
 
-  all_cm <- vapply(x, is_contactmatrix, logical(1))
+  all_cm <- all(vapply(x, is_contactmatrix, logical(1)))
   groupings <- lapply(x, dimnames)
   is_cml <- is_contactmatrix_list(x)
 
