@@ -126,6 +126,7 @@ new_contactmatrix <- function(
 #' @note Checks:
 #' - `x` inherits from the `array` class
 #' - `x` inherits from the `contactmatrix` class
+#' - `x` contains only numeric values
 #' - `x` is an hypercube, i.e., number of rows and number of columns are equal
 #' - `x` has a `symmetric` attribute of class `logical`
 #'
@@ -164,6 +165,7 @@ test_contactmatrix <- function(x) {
 
   return(
     inherits(x, "array") &&
+      is.numeric(x) &&
       is_contactmatrix(x) &&
       length(unique(dim(x))) == 1L &&
       is.logical(attr(x, "symmetric"))
