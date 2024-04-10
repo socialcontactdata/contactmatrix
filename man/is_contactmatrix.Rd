@@ -19,8 +19,8 @@ object.
 }
 \note{
 This doesn't say anything about whether \code{x} is a valid \code{contactmatrix} object
-as defined in this package. You can use \code{\link[=validate_contactmatrix]{validate_contactmatrix()}} for this.
+as defined in this package. You can use \code{\link[=assert_contactmatrix]{assert_contactmatrix()}} for this.
 }
 \seealso{
-\code{\link[=validate_contactmatrix]{validate_contactmatrix()}}
+\code{\link[=assert_contactmatrix]{assert_contactmatrix()}}, \code{\link[=test_contactmatrix]{test_contactmatrix()}}
 }

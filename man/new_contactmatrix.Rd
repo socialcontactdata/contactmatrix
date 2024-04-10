@@ -21,14 +21,12 @@ group \code{to}}
 \item{fill}{Numeric value to use for contacts non-defined in the \code{from},
 \code{to}, \code{value} argument triplet. Defaults to \code{0}; i.e., no contact.}
 
-\item{symmetrix}{Logical value (default to \code{NA}) indicating whether the
-resulting \link{contact_matrix} is symmetric, i.e.,  $c_{ij}N_i == c_{ji}N_j$
-where $i$ is a group from \code{from}, $j$ a group from \code{to}, $c$ their
-corresponding contact \code{value} and $N$ the group size.}
+\item{symmetric}{Logical value (default to \code{NA}) indicating whether the
+resulting \code{[}contactmatrix\verb{is symmetric, i.e.,  $c_\{ij\}N_i == c_\{ji\}N_j$ where $i$ is a group from}from\verb{, $j$ a group from }to\verb{, $c$ their corresponding contact }value` and $N$ the group size.}
 }
 \value{
 An array (a matrix if only 1 grouping = 2 dimensions) of subclass
-\link{contact_matrix}.
+\code{contactmatrix}.
 The array has $2n$ dimensions where $n$ is the number of groupings.
 }
 \description{

@@ -14,7 +14,7 @@
 \item{FUN}{Function to use to aggregate the elements of \code{x} into the output.
 Defaults to \code{mean}.}
 
-\item{...}{Addtional arguments passed to \code{FUN}}
+\item{...}{Additional arguments passed to \code{FUN}}
 }
 \value{
 A \code{contact_matrix} with the same groupings and same groups (in

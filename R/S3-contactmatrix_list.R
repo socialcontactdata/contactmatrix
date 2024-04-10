@@ -7,11 +7,13 @@
 #' @param by Ignored for now
 #' @param FUN Function to use to aggregate the elements of `x` into the output.
 #'   Defaults to `mean`.
-#' @param ... Addtional arguments passed to `FUN`
+#' @param ... Additional arguments passed to `FUN`
 #'
 #' @returns A `contact_matrix` with the same groupings and same groups (in
 #' practice, same `dimnames()`) as all elements of the original
 #' `contactmatrix_list` `x`.
+#'
+#' @importFrom stats aggregate
 #'
 #' @export
 aggregate.contactmatrix_list <- function(x, by, FUN = mean, ...) {
@@ -24,6 +26,8 @@ aggregate.contactmatrix_list <- function(x, by, FUN = mean, ...) {
       call. = FALSE
     )
   }
+
+  # TODO: add input checks in FUN
 
   res <- apply(simplify2array(x), seq_along(dimnames(x[[1]])), FUN, ...)
 

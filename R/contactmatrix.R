@@ -10,8 +10,8 @@
 #'    group `to`
 #' @param fill Numeric value to use for contacts non-defined in the `from`,
 #'   `to`, `value` argument triplet. Defaults to `0`; i.e., no contact.
-#' @param symmetrix Logical value (default to `NA`) indicating whether the
-#'   resulting [contact_matrix] is symmetric, i.e.,  $c_{ij}N_i == c_{ji}N_j$
+#' @param symmetric Logical value (default to `NA`) indicating whether the
+#'   resulting `[`contactmatrix` is symmetric, i.e.,  $c_{ij}N_i == c_{ji}N_j$
 #'   where $i$ is a group from `from`, $j$ a group from `to`, $c$ their
 #'   corresponding contact `value` and $N$ the group size.
 #'
@@ -20,8 +20,10 @@
 #'
 #' @returns
 #' An array (a matrix if only 1 grouping = 2 dimensions) of subclass
-#' [contact_matrix].
+#' `contactmatrix`.
 #' The array has $2n$ dimensions where $n$ is the number of groupings.
+#'
+#' @importFrom stats setNames
 #'
 #' @export
 #'
@@ -177,7 +179,7 @@ test_contactmatrix <- function(x) {
 #' @export
 as_contactmatrix <- function(x, ...) {
 
-  UseMethod()
+  UseMethod("as_contactmatrix")
 
 }
 
@@ -204,9 +206,9 @@ as_contactmatrix.default <- function(x, ...) {
 #'
 #' @note
 #' This doesn't say anything about whether `x` is a valid `contactmatrix` object
-#' as defined in this package. You can use [validate_contactmatrix()] for this.
+#' as defined in this package. You can use [assert_contactmatrix()] for this.
 #'
-#' @seealso [validate_contactmatrix()]
+#' @seealso [assert_contactmatrix()], [test_contactmatrix()]
 #'
 #' @export
 is_contactmatrix <- function(x) {
