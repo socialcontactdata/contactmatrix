@@ -1,3 +1,36 @@
+#' Print a `contactmatrix_list`
+#'
+#' @param x A `contactmatrix_list` object
+#'
+#' @returns `x`, invisibly
+#'
+#' @export
+#'
+#' @examples
+#' cm1 <- new_contactmatrix(
+#'   from  = c("00_05", "05_10", "05_10"),
+#'   to    = c("00_05", "10_15", "15_20"),
+#'   value = c(0.32   , 0.46   , 0.72   )
+#' )
+#'
+#' cm2 <- new_contactmatrix(
+#'   from  = c("05_10", "05_10", "05_10"),
+#'   to    = c("00_05", "10_15", "15_20"),
+#'   value = c(0.27   , 0.09   , 0.32   )
+#' )
+#'
+#' cml <- new_contactmatrix_list(cm1, cm2)
+#'
+#' print(cml)
+#'
+print.contactmatrix_list <- function(x, ...) {
+  cat("Contact matrix list with", length(x), "elements.\n")
+  cat("Each element has the following structure:\n")
+  e <- x[[1]]
+  print(e)
+  invisible(x)
+}
+
 #' Aggregate the elements of a `contactmatrix_list`
 #'
 #' Aggregate the elements of a `contactmatrix_list` into a single
