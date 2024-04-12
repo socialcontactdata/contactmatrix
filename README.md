@@ -5,57 +5,62 @@
 <!-- `packagename` is extracted from the DESCRIPTION file -->
 <!-- `gh_repo` is extracted via a special environment variable in GitHub Actions -->
 
-# {{ packagename }} <img src="man/figures/logo.svg" align="right" width="120" />
+# contactmatrix <img src="man/figures/logo.svg" align="right" width="120" />
 
 <!-- badges: start -->
 
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit/)
-[![R-CMD-check](https://github.com/%7B%7B%20gh_repo%20%7D%7D/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/%7B%7B%20gh_repo%20%7D%7D/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/socialcontactdata/contactmatrix/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/socialcontactdata/contactmatrix/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/%7B%7B%20gh_repo%20%7D%7D/branch/main/graph/badge.svg)](https://app.codecov.io/gh/%7B%7B%20gh_repo%20%7D%7D?branch=main)
-[![lifecycle-concept](https://raw.githubusercontent.com/reconverse/reconverse.github.io/master/images/badge-concept.svg)](https://www.reconverse.org/lifecycle.html#concept)
+coverage](https://codecov.io/gh/socialcontactdata/contactmatrix/branch/main/graph/badge.svg)](https://app.codecov.io/gh/socialcontactdata/contactmatrix?branch=main)
+[![lifecycle-concept](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-{{ packagename }} provides functions to ….
+contactmatrix provides standard classes and methods to work with social
+contact matrices in R.
 
-<!-- This sentence is optional and can be removed -->
+This is an attempt at providing a common framework for social contact
+data in R, to facilitate interoperability between different data sources
+and analysis tools.
 
-{{ packagename }} is developed at the [CENTER\|similar](url) at the
-[UNIVERSITY\|similar](url) as part of the [Epiverse-TRACE
-program](https://data.org/initiatives/epiverse/).
+It results from the collaboration between multiple stakeholders:
+
+- the [‘Social Contact Data’ Zenodo community maintainers and
+  curators](https://zenodo.org/communities/social_contact_data/)
+- the [conmat R package](https://idem-lab.github.io/conmat/) maintainers
+- the [contactdata R
+  package](https://cran.r-project.org/package=contactdata) maintainers
+- the [socialmixr R
+  package](https://cran.r-project.org/package=socialmixr) maintainers
 
 ## Installation
 
-You can install the development version of {{ packagename }} from
+You can install the development version of contactmatrix from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("{{ gh_repo }}")
+pak::pak("socialcontactdata/contactmatrix")
 ```
-
-## Example
-
-These examples illustrate some of the current functionalities
 
 ## Development
 
 ### Lifecycle
 
-This package is currently a *concept*, as defined by the [RECON software
-lifecycle](https://www.reconverse.org/lifecycle.html). This means that
-essential features and mechanisms are still being developed, and the
-package is not ready for use outside of the development team.
+This package is currently *experimental*, as defined by the [tidyverse
+lifecycle](https://lifecycle.r-lib.org/articles/stages.html). This means
+that it is made available so people can try it out and provide feedback,
+but comes with no promises for long term stability.
 
 ### Contributions
 
 Contributions are welcome via [pull
-requests](https://github.com/%7B%7B%20gh_repo%20%7D%7D/pulls).
+requests](https://github.com/socialcontactdata/contactmatrix/pulls).
 
 ### Code of Conduct
 
-Please note that the {{ packagename }} project is released with a
+Please note that the contactmatrix project is released with a
 [Contributor Code of
-Conduct](https://github.com/epiverse-trace/.github/blob/main/CODE_OF_CONDUCT.md).
+Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
