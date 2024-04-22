@@ -72,3 +72,14 @@ aggregate.contactmatrix_list <- function(x, by, FUN = mean, ...) {
 
   return(res)
 }
+
+#' @aliases cm_get_groupings
+#'
+#' @export
+cm_get_groupings.contactmatrix_list <- function(x, ...) {
+
+  # It's safe to do this since by definition, contactmatrix_list elements all
+  # have the same groupings
+  return(attr(x[[1]], "groupings"))
+
+}

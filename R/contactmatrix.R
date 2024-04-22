@@ -91,7 +91,7 @@ new_contactmatrix <- function(
     to
   )
 
-  possible_traits <- setNames(
+  possible_interactions <- setNames(
     c(possible_traits, possible_traits),
     paste(
       rep(names(possible_traits), 2),
@@ -102,14 +102,15 @@ new_contactmatrix <- function(
 
   x <- array(
     data = fill,
-    dim = lengths(possible_traits),
-    dimnames = possible_traits
+    dim = lengths(possible_interactions),
+    dimnames = possible_interactions
   )
 
   x[as.matrix(list2DF(c(from, to)))] <- value
 
   class(x) <- c("contactmatrix", class(x))
   attr(x, "symmetric") <- symmetric
+  attr(x, "groupings") <- simplify_list(possible_traits)
 
   return(x)
 
