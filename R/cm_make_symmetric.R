@@ -12,6 +12,9 @@
 cm_make_symmetric <- function(x, population) {
 
   # TODO: add some input checking
+  if (length(dim(x)) != 2) {
+    stop("Only 2D contact matrices are supported for now", call. = FALSE)
+  }
 
   if (attr(x, "symmetric")) {
     return(x)
