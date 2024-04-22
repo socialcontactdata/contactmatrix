@@ -18,31 +18,55 @@ This vignette outlines the design decisions that have been taken during the deve
 
 This document is primarily intended to be read by those interested in understanding the code within the package and for potential package contributors.
 
-<!-- Text in angular brackets (<>) is to guide what to include for each section please delete the guidelines and replace for your package.
-
-None of the sections are required, feel free to remove any sections not relevant to your package or add new sections if helpful. -->
-
 ## Scope
 
-< Outline the aims of the package, potentially mention some of the key exported functions, and maybe how it links with other R packages. It is also possible to mention certain aspects that fall outside of the package's scope. >
+This package aims to provide a standardised way of dealing with empirical and synthetic social contacts data, such as data from the [socialmixr](https://cran.r-project.org/package=socialmixr), [contactdata](https://cran.r-project.org/package=contactdata), and [conmat](https://idem-lab.github.io/conmat/) R packages. 
+The main rationale is to allow downstream analysis and modelling packages to seamlessly switch from one package to the other without having to reformat the input data. This new contact matrix package will provide a shared, basic, contact matrix class. It is expected that some packages will use this class as an single element in a more complex list output (e.g., socialmixr also includes a citation element)
 
-## Naming conventions
+## Classes
 
-< Description of the scheme and/or conventions used for naming functions and arguments. This can be the use of a prefix on all exported functions, a name mould ("all function are named verb_object"), or any other naming convention that is used throughout the package. >
+### `contactmatrix`
 
-## Input/Output/Interoperability
+- [x] Inherits from array (matrix for 2D) to leverage existing methods, and utility functions (e.g., `t()`)
+- [x] Puts survey participants ("from") in rows
+- [x] Levels are ordered lexicographically (using C locale)
+- [x] Boolean `attr(cm, “symmetric”)` to determine if $c_{ij}N_i == c_{ji}N_j$
+- [ ] Standardized notation to denote age-bins
 
-< Describe the data structures (i.e. vectors, `<data.frames>` or classes) that are given as input to the key functions and what data structures the functions return. The design decisions around these I/O choices could also mention how it enhances interoperability with other R packages or pipelines (e.g. with `%>%`). >
+### Special case of multiple groupings
 
+Although currently rare, we can theoretically consider contact matrices with multiple groupings (e.g. age & gender). To ensure forward-compatibility if this ever becomes more common practice, we allow multiple groupings in the form or multi-dimensional arrays.
 
-## Design decisions
+- [ ] Groupings are ordered lexicographically (using C locale) with the first being the most external.
 
-< A list of bullet points each explaining a design decision and its reasoning. >
+### `contactmatrix_list`
+
+A list of `contactmatrix` from different settings, or just different runs of the socialmixr algorithm to convert survey data to a contact matrix.
+
+## Functions and methods
+
+### Class infrastructure
+
+- [x] a `new_<class>()` function to "manually" construct a new object of the given class
+- [x] two validation functions based on the checkmate package terminology:
+  - an `assert_<class>(x)` function which returns an error or `x` invisibly
+  - a `test_<class>(x)` function which returns a boolean
+- [x] an `is_<class>()` function to check if an object is of the given class, *without* checking its validity
+- [ ] `as_contactmatrix()` generic
+
+### Custom methods
+
+- [ ] `plot()` method for visualisation
+- [ ] `print()` method for human-readable output:
+    - [ ] Show levels
+
+### Helpers
+
+- [ ] Helper to convert to long format;
+- [ ] Helper to transform and interpolate between ages in bins of various sizes.
+- [x] Helper to summarise a contactmatrix_list into a contactmatrix (`aggregate_contactmatrix_list()`)
+- [ ] Helper to obtain the age bins and breaks (if present) in terms of a vector with min or max ages, but also a text-format for figure labels etc.
 
 ## Dependencies
 
-< A list of dependencies used by the package with some explanation as to why they are required. Not all dependencies need to be explained and it is best to explain the key dependencies. It can be used to give context to why certain dependencies are used (e.g. "This package is expected to be used in tidyverse pipelines and as such, we consider these tidyverse packages good dependencies that will already be installed on a user's computer."). This section can also mention dependencies that are planned to be removed or added in future development. Suggested dependencies do not need to be explained unless they are unusual and may surprise developers with their inclusion. >
-
-## Development journey
-
-<  If the package has undergone any large refactoring this section can be used to explain the changes. >
+This package is placed at the low position in the dependency stack, and should therefore depend itself on as few packages as possible.
