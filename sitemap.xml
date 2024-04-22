@@ -13,6 +13,12 @@
     <loc>/LICENSE.html</loc>
   </url>
   <url>
+    <loc>/articles/design-principles.html</loc>
+  </url>
+  <url>
+    <loc>/articles/index.html</loc>
+  </url>
+  <url>
     <loc>/authors.html</loc>
   </url>
   <url>
@@ -41,6 +47,12 @@
   </url>
   <url>
     <loc>/reference/new_contactmatrix.html</loc>
+  </url>
+  <url>
+    <loc>/reference/new_contactmatrix_list.html</loc>
+  </url>
+  <url>
+    <loc>/reference/print.contactmatrix_list.html</loc>
   </url>
   <url>
     <loc>/reference/test_contactmatrix.html</loc>
