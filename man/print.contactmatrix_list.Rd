@@ -8,6 +8,8 @@
 }
 \arguments{
 \item{x}{A \code{contactmatrix_list} object}
+
+\item{...}{Ignored for now}
 }
 \value{
 \code{x}, invisibly

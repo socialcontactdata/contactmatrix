@@ -6,6 +6,8 @@
 #' @returns
 #' A list of `contactmatrix` objects, of class `contactmatrix_list`.
 #'
+#' @export
+#'
 #' @examples
 #' cm1 <- new_contactmatrix(
 #'   from  = c("00_05", "05_10", "05_10"),

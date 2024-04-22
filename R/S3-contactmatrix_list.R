@@ -1,6 +1,7 @@
 #' Print a `contactmatrix_list`
 #'
 #' @param x A `contactmatrix_list` object
+#' @param ... Ignored for now
 #'
 #' @returns `x`, invisibly
 #'
