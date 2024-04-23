@@ -78,14 +78,14 @@
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">cm1</span> <span class="op">&lt;-</span> <span class="fu"><a href="new_contactmatrix.html">new_contactmatrix</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  from  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"00_05"</span>, <span class="st">"05_10"</span>, <span class="st">"05_10"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  to    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"00_05"</span>, <span class="st">"10_15"</span>, <span class="st">"15_20"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  from  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[0,5)"</span>, <span class="st">"[5,10)"</span>,  <span class="st">"[5,10)"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  to    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[0,5)"</span>, <span class="st">"[10,15)"</span>, <span class="st">"[15,20)"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  value <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.32</span>   , <span class="fl">0.46</span>   , <span class="fl">0.72</span>   <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">cm2</span> <span class="op">&lt;-</span> <span class="fu"><a href="new_contactmatrix.html">new_contactmatrix</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  from  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"05_10"</span>, <span class="st">"05_10"</span>, <span class="st">"05_10"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  to    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"00_05"</span>, <span class="st">"10_15"</span>, <span class="st">"15_20"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  from  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[5,10)"</span>,  <span class="st">"[0,5)"</span>,   <span class="st">"[5,10)"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  to    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[15,20)"</span>, <span class="st">"[10,15)"</span>, <span class="st">"[10,15)"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  value <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.27</span>   , <span class="fl">0.09</span>   , <span class="fl">0.32</span>   <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
@@ -94,18 +94,18 @@
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">cml</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Contact matrix list with 2 elements.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Each element has the following structure:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        _to</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> _from   00_05 05_10 10_15 15_20</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   00_05  0.32     0  0.00  0.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   05_10  0.00     0  0.46  0.72</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   10_15  0.00     0  0.00  0.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   15_20  0.00     0  0.00  0.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          _to</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> _from     [0,5) [10,15) [15,20) [5,10)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [0,5)    0.32    0.00    0.00      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [10,15)  0.00    0.00    0.00      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [15,20)  0.00    0.00    0.00      0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,10)   0.00    0.46    0.72      0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "contactmatrix" "matrix"        "array"        </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"symmetric")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"groupings")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "00_05" "05_10" "10_15" "15_20"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "[0,5)"   "[10,15)" "[15,20)" "[5,10)" </span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
