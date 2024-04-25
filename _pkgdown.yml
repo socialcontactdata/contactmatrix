@@ -1,3 +1,18 @@
 url: https://socialcontactdata.github.io/contactmatrix/
 template:
   bootstrap: 5
+
+
+reference:
+- title: S3 classes and methods
+- subtitle: '`contactmatrix` class'
+  contents:
+  - ends_with("_contactmatrix")
+  - ends_with(".contactmatrix")
+- subtitle: '`contactmatrix_list` class'
+  contents:
+  - ends_with("_contactmatrix_list")
+  - ends_with(".contactmatrix_list")
+- title: Helpers
+  contents:
+  - cm_get_groupings
