@@ -1,33 +1,26 @@
 Package: contactmatrix
-Title: Standard Class and Methods for Empirical and Synthetic Social Contact Data
+Title: Standard Class and Methods for Empirical and Synthetic Social
+    Contact Data
 Version: 0.0.1
 Authors@R: c(
-    person(given = "Hugo", family = "Gruson", 
-           email = "hugo.gruson+R@normalesup.org", 
-           role = c("aut", "cre"),
+    person("Hugo", "Gruson", , "hugo.gruson+R@normalesup.org", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4094-1476")),
-    person(given = "Tim", family = "Taylor",
-           role = "aut", 
+    person("Tim", "Taylor", role = "aut",
            comment = c(ORCID = "0000-0002-8587-7113")),
-    person(given = "Sebastian", family = "Funk",
-           role = "ctb"),
-    person(given = "Lander", family = "Willem", 
-           role = "ctb"),
-    person(given = "Niel", family = "Hens", 
-           role = "ctb"),
-    person(given = "Pietro", family = "Coletti", 
-           role = "ctb"),
-    person(given = "Nicholas", family = "Tierney",
-           role = "ctb")
+    person("Sebastian", "Funk", role = "ctb"),
+    person("Lander", "Willem", role = "ctb"),
+    person("Niel", "Hens", role = "ctb"),
+    person("Pietro", "Coletti", role = "ctb"),
+    person("Nicholas", "Tierney", role = "ctb")
   )
 Description: contactmatrix provides standard S3 classes and methods to
     work with social contact matrices. It can serve as a common framework
     for social contact data in R, to facilitate interoperability between
     different data sources and analysis tools.
 License: MIT + file LICENSE
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+URL: https://socialcontactdata.github.io/contactmatrix/,
+    https://github.com/socialcontactdata/contactmatrix
+BugReports: https://github.com/socialcontactdata/contactmatrix/issues
 Imports: 
     stats
 Suggests: 
@@ -35,8 +28,10 @@ Suggests:
     rmarkdown,
     spelling,
     testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
 Config/testthat/edition: 3
+Encoding: UTF-8
 Language: en-US
-VignetteBuilder: knitr
-URL: https://socialcontactdata.github.io/contactmatrix/, https://github.com/socialcontactdata/contactmatrix
-BugReports: https://github.com/socialcontactdata/contactmatrix/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
