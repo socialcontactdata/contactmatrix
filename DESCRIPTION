@@ -20,9 +20,10 @@ Authors@R: c(
     person(given = "Nicholas", family = "Tierney",
            role = "ctb")
   )
-Description: Your package description. It must end with a period (".") and
-    include relevant bibliographical references if applicable, using the 
-    following format: Author et al. (2023) <doi:10.5281/zenodo.6619350>.
+Description: contactmatrix provides standard S3 classes and methods to
+    work with social contact matrices. It can serve as a common framework
+    for social contact data in R, to facilitate interoperability between
+    different data sources and analysis tools.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
