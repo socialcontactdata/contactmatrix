@@ -37,3 +37,5 @@ Suggests:
 Config/testthat/edition: 3
 Language: en-US
 VignetteBuilder: knitr
+URL: https://socialcontactdata.github.io/contactmatrix/, https://github.com/socialcontactdata/contactmatrix
+BugReports: https://github.com/socialcontactdata/contactmatrix/issues
