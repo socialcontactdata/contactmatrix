@@ -28,10 +28,19 @@ The main rationale is to allow downstream analysis and modelling packages to sea
 ### `contactmatrix`
 
 - [x] Inherits from array (matrix for 2D) to leverage existing methods, and utility functions (e.g., `t()`)
-- [x] Puts survey participants ("from") in rows
+    - ✓ used in socialmixr
+    - ✓ used in contactdata
+    - ✓ used in conmat
+- [x] Puts survey participants ("from") in rows:
+    - ✓ used in socialmixr
+    - ✓ used in contactdata
+    - ✗ transposed in conmat
 - [x] Levels are ordered lexicographically (using C locale)
 - [x] Boolean `attr(cm, “symmetric”)` to determine if $c_{ij}N_i == c_{ji}N_j$
-- [ ] Standardized notation to denote age-bins
+- [ ] Standardized notation to denote age-bins (`[low, high)`):
+    - ✓ used in socialmixr
+    - ✓ used in conmat plots
+    - ✓ used in Epiverse-TRACE plots
 
 ### Special case of multiple groupings
 
