@@ -31,7 +31,7 @@ The main rationale is to allow downstream analysis and modelling packages to sea
     - ✓ used in socialmixr
     - ✓ used in contactdata
     - ✓ used in conmat
-- [x] Puts survey participants ("from") in rows:
+- [x] Puts survey participants in rows:
     - ✓ used in socialmixr
     - ✓ used in contactdata
     - ✗ transposed in conmat
