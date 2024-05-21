@@ -199,6 +199,38 @@ as_contactmatrix.default <- function(x, ...) {
 
 }
 
+#' Convert a `matrix` to a `contactmatrix` object.
+#'
+#' The `matrix` has to already follow the `contactmatrix` convention of having
+#' the survey participants as the rows.
+#' This method will only add the correct class and attributes, but not touch
+#' the data itself.
+#'
+#' @param x Array to convert
+#' @inheritParams new_contactmatrix
+#' @inheritParams as_contactmatrix
+#'
+#' @export
+as_contactmatrix.matrix <- function(x, symmetric = NA, ...) {
+  # TODO: see what's missing to make this an array method
+
+  class(x) <- c("contactmatrix", class(x))
+  attr(x, "symmetric") <- symmetric
+  # It doesn't matter if we take rownames() or colnames() since they should be
+  # identical
+  attr(x, "groupings") <- colnames(x)
+
+  if (!test_contactmatrix(x)) {
+    stop(
+      "Object cannot be converted to a valid `contactmatrix` object.",
+      call. = FALSE
+    )
+  }
+
+  return(x)
+
+}
+
 #' Test whether a object is a valid `contactmatrix` object
 #'
 #' This function tests if the object `x` inherits from the `contactmatrix`
