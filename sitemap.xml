@@ -1,66 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/404.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/articles/design-principles.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/index.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/aggregate.contactmatrix_list.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/as_contactmatrix.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/assert_contactmatrix.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/assert_contactmatrix_list.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/cm_get_groupings.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/is_contactmatrix.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/is_contactmatrix_list.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/new_contactmatrix.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/new_contactmatrix_list.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/print.contactmatrix_list.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/test_contactmatrix.html</loc>
-  </url>
-  <url>
-    <loc>https://socialcontactdata.github.io/contactmatrix/reference/test_contactmatrix_list.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/404.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/LICENSE-text.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/LICENSE.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/articles/design-principles.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/articles/index.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/authors.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/index.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/aggregate.contactmatrix_list.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/as_contactmatrix.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/assert_contactmatrix.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/assert_contactmatrix_list.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/cm_get_groupings.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/cm_make_symmetric.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/index.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/is_contactmatrix.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/is_contactmatrix_list.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/new_contactmatrix.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/new_contactmatrix_list.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/print.contactmatrix_list.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/test_contactmatrix.html</loc></url>
+<url><loc>https://socialcontactdata.github.io/contactmatrix/reference/test_contactmatrix_list.html</loc></url>
 </urlset>
+
