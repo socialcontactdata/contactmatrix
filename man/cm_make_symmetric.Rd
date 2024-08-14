@@ -16,5 +16,6 @@ A symmetric \code{contactmatrix} object
 }
 \description{
 Symmetricity for social contact matrices is defined as
-$c_{ij}N_i == c_{ji}N_j$ where c is the contact value and N the group size.
+\eqn{c_{ij}N_i == c_{ji}N_j} where c is the contact value and N the group
+size.
 }
