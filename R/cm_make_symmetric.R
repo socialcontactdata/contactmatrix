@@ -1,7 +1,8 @@
 #' Make a `contactmatrix` object symmetric
 #'
 #' Symmetricity for social contact matrices is defined as
-#' $c_{ij}N_i == c_{ji}N_j$ where c is the contact value and N the group size.
+#' \eqn{c_{ij}N_i == c_{ji}N_j} where c is the contact value and N the group
+#' size.
 #'
 #' @param x A `contactmatrix` object to make symmetric
 #' @param population A numeric vector of the population size of each group
