@@ -16,3 +16,4 @@ reference:
 - title: Helpers
   contents:
   - cm_get_groupings
+  - cm_make_symmetric
