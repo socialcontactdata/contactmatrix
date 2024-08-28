@@ -12,6 +12,13 @@ from}
 
 \item{...}{Ignored for now}
 }
+\value{
+\itemize{
+\item In the case of single groupings, a character vector of the groupings
+\item In the case of multiple groupings, a list of character vectors of the
+groupings
+}
+}
 \description{
 Get groupings of a \code{contactmatrix} or \code{contactmatrix_list} object
 }
@@ -32,4 +39,19 @@ cml <- new_contactmatrix_list(cm1, cm2)
 
 cm_get_groupings(cm1)
 cm_get_groupings(cml)
+
+Multi-groupings
+cm3d <- new_contactmatrix(
+  from  = list(
+    age = c("young", "young", "old"),
+    gender = c("male", "female", "female")
+  ),
+  to    = list(
+    age    = c("old", "old", "young"),
+    gender = c("female", "female", "female")
+  ),
+  value = c(1, 2, 2)
+)
+
+cm_get_groupings(cm3d)
 }

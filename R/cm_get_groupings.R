@@ -4,6 +4,11 @@
 #' from
 #' @param ... Ignored for now
 #'
+#' @returns
+#' - In the case of single groupings, a character vector of the groupings
+#' - In the case of multiple groupings, a list of character vectors of the
+#' groupings
+#'
 #' @export
 #'
 #' @examples
@@ -23,6 +28,21 @@
 #'
 #' cm_get_groupings(cm1)
 #' cm_get_groupings(cml)
+#'
+#' Multi-groupings
+#' cm3d <- new_contactmatrix(
+#'   from  = list(
+#'     age = c("young", "young", "old"),
+#'     gender = c("male", "female", "female")
+#'   ),
+#'   to    = list(
+#'     age    = c("old", "old", "young"),
+#'     gender = c("female", "female", "female")
+#'   ),
+#'   value = c(1, 2, 2)
+#' )
+#'
+#' cm_get_groupings(cm3d)
 cm_get_groupings <- function(x, ...) {
   UseMethod("cm_get_groupings")
 }
