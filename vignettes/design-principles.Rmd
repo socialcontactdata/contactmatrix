@@ -61,7 +61,7 @@ A list of `contactmatrix` from different settings, or just different runs of the
   - an `assert_<class>(x)` function which returns an error or `x` invisibly
   - a `test_<class>(x)` function which returns a boolean
 - [x] an `is_<class>()` function to check if an object is of the given class, *without* checking its validity
-- [ ] `as_contactmatrix()` generic
+- [x] `as_contactmatrix()` generic
 
 ### Custom methods
 
