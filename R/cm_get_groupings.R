@@ -29,7 +29,7 @@
 #' cm_get_groupings(cm1)
 #' cm_get_groupings(cml)
 #'
-#' Multi-groupings
+#' # Multi-groupings
 #' cm3d <- new_contactmatrix(
 #'   from  = list(
 #'     age = c("young", "young", "old"),
