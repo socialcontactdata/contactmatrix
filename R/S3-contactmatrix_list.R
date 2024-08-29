@@ -25,7 +25,7 @@
 #' print(cml)
 #'
 print.contactmatrix_list <- function(x, ...) {
-  cat("Contact matrix list with", length(x), "elements.\n")
+  cli::cli_h1("Contact matrix list with {length(x)} elements.")
   cat("Each element has the following structure:\n")
   e <- x[[1]]
   print(e)

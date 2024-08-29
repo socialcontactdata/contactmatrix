@@ -66,8 +66,8 @@ A list of `contactmatrix` from different settings, or just different runs of the
 ### Custom methods
 
 - [ ] `plot()` method for visualisation
-- [ ] `print()` method for human-readable output:
-    - [ ] Show levels
+- [x] `print()` method for human-readable output:
+    - [x] Show levels
 
 ### Helpers
 
