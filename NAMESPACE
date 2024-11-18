@@ -2,6 +2,7 @@
 
 S3method(aggregate,contactmatrix_list)
 S3method(as_contactmatrix,default)
+S3method(as_contactmatrix,matrix)
 S3method(cm_get_groupings,contactmatrix)
 S3method(cm_get_groupings,contactmatrix_list)
 S3method(head,contactmatrix)
