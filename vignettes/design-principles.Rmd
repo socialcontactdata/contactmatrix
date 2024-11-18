@@ -73,7 +73,7 @@ A list of `contactmatrix` from different settings, or just different runs of the
 
 - [ ] Helper to convert to long format;
 - [ ] Helper to transform and interpolate between ages in bins of various sizes.
-- [x] Helper to summarise a contactmatrix_list into a contactmatrix (`aggregate_contactmatrix_list()`)
+- [x] Helper to summarise a contactmatrix_list into a contactmatrix (`aggregate.contactmatrix_list()`)
 - [x] Helper to make the contact matrix symmetric (`cm_make_symmetric()`)
 - [ ] Helper to obtain the age bins and breaks (if present) in terms of a vector with min or max ages, but also a text-format for figure labels etc.
 
