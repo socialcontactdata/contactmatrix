@@ -3,11 +3,14 @@
 \name{as_contactmatrix}
 \alias{as_contactmatrix}
 \alias{as_contactmatrix.default}
+\alias{as_contactmatrix.contactmatrix}
 \title{Convert an object to a \code{contactmatrix} object.}
 \usage{
 as_contactmatrix(x, ...)
 
 \method{as_contactmatrix}{default}(x, ...)
+
+\method{as_contactmatrix}{contactmatrix}(x, ...)
 }
 \arguments{
 \item{x}{Object to convert}
