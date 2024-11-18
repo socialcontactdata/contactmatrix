@@ -199,6 +199,12 @@ as_contactmatrix.default <- function(x, ...) {
 
 }
 
+#' @rdname as_contactmatrix
+#' @export
+as_contactmatrix.contactmatrix <- function(x, ...) {
+  x
+}
+
 #' Test whether a object is a valid `contactmatrix` object
 #'
 #' This function tests if the object `x` inherits from the `contactmatrix`
