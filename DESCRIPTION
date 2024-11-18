@@ -25,6 +25,7 @@ URL: https://socialcontactdata.github.io/contactmatrix/,
 BugReports: https://github.com/socialcontactdata/contactmatrix/issues
 Imports: 
     cli,
+    generics,
     stats
 Suggests: 
     knitr,

@@ -81,3 +81,43 @@ head.contactmatrix <- function(x, n, ...) {
   return(out)
 
 }
+
+#' Convert a `contactmatrix` to a tidy `data.frame`
+#'
+#' @param x A `contactmatrix` object
+#' @param ... Ignored for now
+#'
+#' @importFrom generics tidy
+#' @importFrom stats reshape
+#'
+#' @export
+#'
+#' @examples
+#' cm2d <- new_contactmatrix(
+#'   from  = c("[0,5)", "[5,10)",  "[5,10)"),
+#'   to    = c("[0,5)", "[10,15)", "[15,20)"),
+#'   value = c(0.32   , 0.46   , 0.72   ),
+#'   symmetric = TRUE
+#' )
+#' tidy(cm2d)
+tidy.contactmatrix <- function(x, ...) {
+
+  gpings <- cm_get_groupings(x)
+  if (is.list(gpings)) {
+    stop("Cannot tidy a multi-groupings contact matrix yet", call. = FALSE)
+  }
+
+  out <- reshape(
+    as.data.frame(x),
+    idvar = "age_from",
+    ids = gpings,
+    times = gpings,
+    timevar = "age_to",
+    varying = list(gpings),
+    direction = "long"
+  )
+  rownames(out) <- NULL
+  colnames(out)[2] <- "contact"
+  out[, c(3, 1, 2)]
+
+}
