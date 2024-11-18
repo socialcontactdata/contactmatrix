@@ -40,6 +40,9 @@ cm_get_groupings.contactmatrix <- function(x, ...) {
 #' print(cm3d)
 print.contactmatrix <- function(x, ...) {
 
+  # Skip linting as cli usage is not covered:
+  # https://github.com/r-lib/lintr/issues/2252
+  # nolint next: object_usage_linter.
   cm_symmetry <- switch(
     as.character(attr(x, "symmetric")),
     "TRUE" = "Symmetric ",
