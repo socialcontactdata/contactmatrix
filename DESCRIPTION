@@ -11,7 +11,9 @@ Authors@R: c(
     person("Lander", "Willem", role = "ctb"),
     person("Niel", "Hens", role = "ctb"),
     person("Pietro", "Coletti", role = "ctb"),
-    person("Nicholas", "Tierney", role = "ctb")
+    person("Nicholas", "Tierney", role = "ctb"),
+    person("Joshua W.", "Lambert", role = "ctb",
+           comment = c(ORCID = "0000-0001-5218-3046"))
   )
 Description: contactmatrix provides standard S3 classes and methods to
     work with social contact matrices. It can serve as a common framework
