@@ -42,6 +42,25 @@ references:
   year: '2024'
   doi: 10.32614/CRAN.package.cli
 - type: software
+  title: generics
+  abstract: 'generics: Common S3 Generics not Provided by Base R Methods Related to
+    Model Fitting'
+  notes: Imports
+  url: https://generics.r-lib.org
+  repository: https://CRAN.R-project.org/package=generics
+  authors:
+  - family-names: Wickham
+    given-names: Hadley
+    email: hadley@rstudio.com
+  - family-names: Kuhn
+    given-names: Max
+    email: max@rstudio.com
+  - family-names: Vaughan
+    given-names: Davis
+    email: davis@rstudio.com
+  year: '2024'
+  doi: 10.32614/CRAN.package.generics
+- type: software
   title: stats
   abstract: 'R: A Language and Environment for Statistical Computing'
   notes: Imports
