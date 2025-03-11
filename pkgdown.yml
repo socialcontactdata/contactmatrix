@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   design-principles: design-principles.html
-last_built: 2025-03-11T15:27Z
+last_built: 2025-03-11T15:34Z
 urls:
   reference: https://socialcontactdata.github.io/contactmatrix/reference
   article: https://socialcontactdata.github.io/contactmatrix/articles
