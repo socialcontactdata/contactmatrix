@@ -20,7 +20,7 @@ This document is primarily intended to be read by those interested in understand
 
 ## Scope
 
-This package aims to provide a standardised way of dealing with empirical and synthetic social contacts data, such as data from the [socialmixr](https://cran.r-project.org/package=socialmixr), [contactdata](https://cran.r-project.org/package=contactdata), and [conmat](https://idem-lab.github.io/conmat/) R packages. 
+This package aims to provide a standardised way of dealing with empirical and synthetic social contacts data, such as data from the [socialmixr](https://cran.r-project.org/package=socialmixr), [contactdata](https://cran.r-project.org/package=contactdata), and [conmat](https://idem-lab.github.io/conmat/) R packages.
 The main rationale is to allow downstream analysis and modelling packages to seamlessly switch from one package to the other without having to reformat the input data. This new contact matrix package will provide a shared, basic, contact matrix class. It is expected that some packages will use this class as an single element in a more complex list output (e.g., socialmixr also includes a citation element)
 
 ## Classes
@@ -37,8 +37,9 @@ The main rationale is to allow downstream analysis and modelling packages to sea
     - ✗ transposed in conmat
 - [x] Levels are ordered lexicographically (using C locale)
 - [x] Boolean `attr(cm, “symmetric”)` to determine if $c_{ij}N_i == c_{ji}N_j$
-- [ ] Standardized notation to denote age-bins (`[low, high)`):
+- [x] Standardized notation to denote age-bins (`[low, high)`):
     - ✓ used in socialmixr
+    - ✓ used in contactdata
     - ✓ used in conmat plots
     - ✓ used in Epiverse-TRACE plots
 
